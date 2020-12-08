@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ object.category }}
+    {{ object.title }}
+    {{ object.content }}
+    {{ object.postdate }}
+    <a href="{% url 'list' %}">
+        <p>一覧へ</p>
+    </a>
+    <a href="{% url 'update' object.pk %}">
+        <p>編集</p>
+    </a>
+
+{% endblock content %}
+
